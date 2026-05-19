@@ -14,6 +14,8 @@ Secrets：
 RCLONE_CONF:rclone配置内容    
 AUTH_TOKEN:登陆验证Token   
 
+# 目前最新代码default用户的网关无法运行成功，暂时解决办法：用户-创建配置-从当前配置克隆，然后切换到新用户使用。
+
 # 关于备份可以让AI建立定时任务执行以下代码
 ```
 bash /app/sync.sh backup
