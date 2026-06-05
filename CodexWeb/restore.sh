@@ -1,7 +1,10 @@
 
+RCLONE_CONF="${RCLONE_CONF:-}"
 
-echo  "======================写入rclone配置========================\n"
-echo "$RCLONE_CONF" > ~/.config/rclone/rclone.conf
+if [ -n "$RCLONE_CONF" ]; then
+  echo  "======================写入rclone配置========================\n"
+  echo "$RCLONE_CONF" > ~/.config/rclone/rclone.conf
+fi
 
 if [ -n "$RCLONE_CONF" ]; then
   echo "##########同步备份############"
@@ -29,5 +32,3 @@ if [ -n "$RCLONE_CONF" ]; then
 else
     echo "没有检测到Rclone配置信息"
 fi
-
-
